@@ -933,6 +933,8 @@ const IR::Expression* ProgramStructure::convertHashAlgorithm(
         result = v1model.algorithm.csum16.Id();
     } else if (algorithm == "xor16") {
         result = v1model.algorithm.xor16.Id();
+    } else if (algorithm == "hmac") {
+        result = v1model.algorithm.hmac.Id();
     } else {
         ::warning("%1%: unexpected algorithm", algorithm);
         result = algorithm;
