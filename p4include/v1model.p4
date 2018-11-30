@@ -260,3 +260,8 @@ package V1Switch<H, M>(Parser<H, M> p,
                        );
 
 #endif  /* _V1_MODEL_P4_ */
+
+
+//Priority queueing
+@alias("queueing_metadata.qid")           bit<5>  qid;
+@alias("intrinsic_metadata.priority")     bit<3> priority;
