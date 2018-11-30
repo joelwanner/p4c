@@ -71,6 +71,9 @@ struct standard_metadata_t {
     // 1 if a checksum error was found, otherwise 0.
     bit<1>  checksum_error;
     @alias("intrinsic_metadata.recirculate_flag") bit<32> recirculate_flag;
+    //Priority queueing
+    @alias("queueing_metadata.qid")           bit<5>  qid;
+    @alias("intrinsic_metadata.priority")     bit<3> priority;
     /// Error produced by parsing
     error parser_error;
 }
@@ -260,8 +263,3 @@ package V1Switch<H, M>(Parser<H, M> p,
                        );
 
 #endif  /* _V1_MODEL_P4_ */
-
-
-//Priority queueing
-@alias("queueing_metadata.qid")           bit<5>  qid;
-@alias("intrinsic_metadata.priority")     bit<3> priority;
